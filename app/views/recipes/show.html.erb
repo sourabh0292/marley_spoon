@@ -1,0 +1,10 @@
+<html>
+  <head><b>DETAILED VIEW</head><br>
+	Title: <%= @recipe_data["fields"]["title"] %><br>
+	Description: <%= @recipe_data["fields"]["description"] %><br>
+	Calories: <%= @recipe_data["fields"]["calories"] %><br>
+	<% asset_id = @recipe_data["fields"]["photo"]["sys"]["id"] %>
+	<% asset_object = ContentfulService.new.get_image(asset_id) %>
+	<% image_url = "https:#{asset_object["fields"]["file"]["url"]}" %>
+	<%= image_tag image_url %>
+</html>

@@ -1,0 +1,10 @@
+<html>
+  <head> LIST VIEW </head><br>
+  <% @all_recipes["items"].map {|item| item if item["sys"]["contentType"]["sys"].has_value?("recipe") }.compact.each do |recipe| %>
+    <br>TITLE: <a href="<%= recipe_path(recipe['sys']['id']) %>"><%= recipe['fields']['title'] %></a><br>
+    IMAGE: <% asset_id = recipe["fields"]["photo"]["sys"]["id"] %>
+    <% asset_object = ContentfulService.new.get_image(asset_id) %>
+    <% image_url = "https:#{asset_object["fields"]["file"]["url"]}" %>
+    <br><%= image_tag image_url %><br>
+  <% end %>
+</html>
