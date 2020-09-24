@@ -13,7 +13,7 @@ Things you may want to cover:
 
 * CLONE THE REPOSITORY
 
-* Run bundle install
+* Run bundle install and install all the gems which are required to run the application
 
 * Run 'rails server' to ensure everything is ok
 

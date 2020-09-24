@@ -1,16 +1,16 @@
 class RecipesController < ApplicationController
-	before_action :load_recipe, only: :show
+  before_action :load_recipe, only: :show
 
-	def index
-	  @all_recipes = ContentfulService.new.get_recipes
-	end
+  def index
+    @all_recipes = ContentfulService.new.get_recipes
+  end
 
-	def show; end
+  def show; end
 
-	private
+  private
 
-	def load_recipe
-	  entry_id = params[:id]
-	  @recipe_data = JSON.parse(ContentfulService.new.get_recipe(entry_id).body)
-	end
+  def load_recipe
+    entry_id = params[:id]
+    @recipe_data = JSON.parse(ContentfulService.new.get_recipe(entry_id).body)
+  end
 end
