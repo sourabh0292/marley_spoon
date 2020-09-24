@@ -17,6 +17,9 @@ Things you may want to cover:
 
 * Run 'rails server' to ensure everything is ok
 
+DESCRIPTION
+ - Created a service app/services/contentful_service.rb to fetch data from the contentful API.
+
 <img width="1440" alt="Screenshot 2020-09-24 at 5 13 08 AM" src="https://user-images.githubusercontent.com/23318509/94085484-e48e5680-fe25-11ea-9edc-a974c080073c.png">
 
 
